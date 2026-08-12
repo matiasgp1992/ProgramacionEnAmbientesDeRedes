@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Formulario de Inscripción</title>
+</head>
+<body>
+
+	<header>
+		<h1>Formulario de Inscripción a Curso</h1>
+	</header>
+
+	<main>
+		<form action="respuestaFormulario.html" method="get">
+
+			<fieldset>
+				<legend>Datos personales</legend>
+
+				<p>
+					<label for="nombre">Nombre:</label><br>
+					<input type="text" id="nombre" name="nombre" placeholder="Escriba su nombre">
+				</p>
+
+				<p>
+					<label for="contrasena">Contraseña:</label><br>
+					<input type="password" id="contrasena" name="contrasena" placeholder="Ingrese una contraseña">
+				</p>
+
+				<input type="hidden" name="origen" value="formulario-web">
+
+				<p>
+					<label for="bloqueado">Campo bloqueado:</label><br>
+					<input type="text" id="bloqueado" name="bloqueado" value="No se puede modificar" disabled>
+				</p>
+
+				<p>
+					<label for="solo_lectura">Campo solo lectura:</label><br>
+					<input type="text" id="solo_lectura" name="solo_lectura" value="USR-2026-001" readonly>
+				</p>
+
+				<p>
+					Intereses:<br>
+					<input type="checkbox" id="int_prog" name="intereses" value="Programacion">
+					<label for="int_prog">Programación</label>
+
+					<input type="checkbox" id="int_redes" name="intereses" value="Redes">
+					<label for="int_redes">Redes</label>
+
+					<input type="checkbox" id="int_bd" name="intereses" value="Bases de datos">
+					<label for="int_bd">Bases de datos</label>
+
+					<input type="checkbox" id="int_seg" name="intereses" value="Seguridad">
+					<label for="int_seg">Seguridad</label>
+				</p>
+
+				<p>
+					Sexo:<br>
+					<input type="radio" id="sexo_m" name="sexo" value="Masculino">
+					<label for="sexo_m">Masculino</label>
+
+					<input type="radio" id="sexo_f" name="sexo" value="Femenino">
+					<label for="sexo_f">Femenino</label>
+				</p>
+
+				<p>
+					<label for="fecha_nac">Fecha de nacimiento:</label><br>
+					<input type="date" id="fecha_nac" name="fecha_nac">
+				</p>
+
+				<p>
+					<label for="hora_pref">Horario preferido:</label><br>
+					<input type="time" id="hora_pref" name="hora_pref">
+				</p>
+
+				<p>
+					<label for="color_fav">Color favorito:</label><br>
+					<input type="color" id="color_fav" name="color_fav" value="#3366ff">
+				</p>
+
+				<p>
+					<label for="pais">País:</label><br>
+					<select id="pais" name="pais">
+						<option value="">Seleccione un país</option>
+						<option value="Argentina">Argentina</option>
+						<option value="Chile">Chile</option>
+						<option value="Uruguay">Uruguay</option>
+						<option value="Paraguay">Paraguay</option>
+						<option value="Brasil">Brasil</option>
+					</select>
+				</p>
+			</fieldset>
+
+			<fieldset>
+				<legend>ENTRADAS CON VALIDACION</legend>
+
+				<p>
+					<label for="apellido">Apellido (requerido):</label><br>
+					<input type="text" id="apellido" name="apellido" required placeholder="Escriba su apellido">
+				</p>
+
+				<p>
+					<label for="email">Correo electrónico:</label><br>
+					<input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+				</p>
+
+				<p>
+					<label for="edad">Edad (solo números enteros):</label><br>
+					<input type="number" id="edad" name="edad" step="1" min="0" placeholder="Ej: 25" required>
+				</p>
+
+				<p>
+					<label for="promedio">Promedio (formato decimal):</label><br>
+					<input type="number" id="promedio" name="promedio" step="0.01" min="0" placeholder="Ej: 8.75" required>
+				</p>
+
+				<p>
+					<label for="sitio_web">Sitio web (URL):</label><br>
+					<input type="url" id="sitio_web" name="sitio_web" placeholder="http://www.ejemplo.com" required>
+				</p>
+
+				<p>
+					<label for="codigo_alumno">Código de alumno (3 letras y 3 números):</label><br>
+					<input type="text" id="codigo_alumno" name="codigo_alumno" pattern="[A-Za-z]{3}[0-9]{3}" placeholder="abc123" title="Debe tener 3 letras seguidas de 3 números, ej: abc123" required>
+				</p>
+
+				<p>
+					<label for="telefono">Teléfono:</label><br>
+					<input type="tel" id="telefono" name="telefono" pattern="\(\+54\) \d{3} \d{8}" placeholder="(+54) 011 43434343" title="Formato requerido: (+54) 011 43434343" required>
+				</p>
+			</fieldset>
+
+			<p>
+				<button type="submit">Enviar</button>
+				<button type="reset">Resetear</button>
+			</p>
+
+		</form>
+	</main>
+
+</body>
+</html>
