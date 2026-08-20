@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>css09DivsInternosEnColumnas</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            padding: 20px;
+        }
+
+        .contenedor {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+            padding: 0 20px 20px 20px;
+        }
+
+        .columna {
+            background-color: #aed6e8;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 1100px) {
+            .contenedor {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 700px) {
+            .contenedor {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 450px) {
+            .contenedor {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Encolumnado sin Tablas</h1>
+
+    <div class="contenedor">
+        <div class="columna">
+            <p>Articulo 1 Datos para incluir en esta columna, Datos para incluir en esta columna Datos para incluir en esta columna Datos para incluir en esta columna Datos para incluir en esta columna</p>
+        </div>
+        <div class="columna">
+            <p>Articulo 2 Datos para incluir en esta columna Datos para incluir en esta columna Datos para incluir en esta columna Datos para incluir en esta columna</p>
+        </div>
+        <div class="columna">
+            <p>Articulo 3 Datos para incluir en esta columna Datos para incluir en esta columna Datos para incluir en esta columna</p>
+        </div>
+        <div class="columna">
+            <p>Articulo 4 Datos para incluir en esta columna Datos para incluir en esta columna Datos para incluir en esta columna</p>
+        </div>
+        <div class="columna">
+            <p>Articulo 5 Datos para incluir en esta columna Datos para incluir en esta columna</p>
+        </div>
+        <div class="columna">
+            <p>Articulo 6 Datos para incluir en esta columna Datos para incluir en esta columna Datos para incluir en esta columna Datos para incluir en esta columna Datos para incluir en esta columna</p>
+        </div>
+        <div class="columna">
+            <p>Articulo 7 Datos para incluir en esta columna Datos para incluir en esta columna Datos para incluir en esta columna</p>
+        </div>
+        <div class="columna">
+            <p>Articulo 8 Datos para incluir en esta columna Datos para incluir en esta columna</p>
+        </div>
+    </div>
+</body>
+</html>

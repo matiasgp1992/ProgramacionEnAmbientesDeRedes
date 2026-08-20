@@ -1,0 +1,22 @@
+h1 {
+    color: #6f4e37;
+    text-align: center;
+}
+
+h2 {
+    background-color: #d2b48c;
+}
+
+#parrafoOrigen {
+    font-style: italic;
+}
+
+#parrafoTipos {
+    font-weight: bold;
+}
+
+#parrafoBeneficios {
+    border: 2px solid blue;
+    color: blue;
+    padding: 10px;
+}

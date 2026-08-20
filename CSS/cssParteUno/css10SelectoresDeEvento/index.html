@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>css10SelectoresDeEvento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            color: #2c3e50;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        .bloque {
+            margin-bottom: 25px;
+        }
+
+        /* :active - botón cambia de color mientras se lo presiona */
+        button:active {
+            background-color: orange;
+        }
+
+        /* :checked - el checkbox marcado cambia el color de su etiqueta */
+        input[type="checkbox"]:checked + label {
+            color: green;
+            font-weight: bold;
+        }
+
+        /* :disabled - input deshabilitado se ve gris */
+        input:disabled {
+            background-color: #ddd;
+            color: #888;
+        }
+
+        /* :empty - un div vacío muestra un borde punteado */
+        .cajaVacia:empty {
+            border: 2px dashed red;
+            height: 40px;
+            width: 200px;
+        }
+
+        /* :enabled - input habilitado con borde verde */
+        input:enabled {
+            border: 2px solid green;
+        }
+
+        /* :focus - input resalta al enfocarse */
+        input:focus {
+            outline: 3px solid #4285f4;
+        }
+
+        /* :hover - caja cambia de color al pasar el mouse */
+        .cajaHover:hover {
+            background-color: #f4c542;
+        }
+
+        .cajaHover {
+            background-color: #ececec;
+            padding: 15px;
+            width: 200px;
+        }
+
+        /* :read-only - input de solo lectura con fondo distinto */
+        input:read-only {
+            background-color: #fff8e1;
+        }
+
+        /* :visited - enlace visitado cambia de color */
+        a:visited {
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <h1>Selectores de Evento</h1>
+
+    <div class="bloque">
+        <h2>:active</h2>
+        <button>Presioname</button>
+    </div>
+
+    <div class="bloque">
+        <h2>:checked</h2>
+        <input type="checkbox" id="opcion" name="opcion">
+        <label for="opcion">Marcar opción</label>
+    </div>
+
+    <div class="bloque">
+        <h2>:disabled</h2>
+        <input type="text" value="No se puede editar" disabled>
+    </div>
+
+    <div class="bloque">
+        <h2>:empty</h2>
+        <div class="cajaVacia"></div>
+    </div>
+
+    <div class="bloque">
+        <h2>:enabled</h2>
+        <input type="text" value="Este input está habilitado">
+    </div>
+
+    <div class="bloque">
+        <h2>:focus</h2>
+        <input type="text" placeholder="Hace click aquí">
+    </div>
+
+    <div class="bloque">
+        <h2>:hover</h2>
+        <div class="cajaHover">Pasa el mouse por acá</div>
+    </div>
+
+    <div class="bloque">
+        <h2>:read-only</h2>
+        <input type="text" value="Este texto es de solo lectura" readonly>
+    </div>
+
+    <div class="bloque">
+        <h2>:visited</h2>
+        <a href="https://www.google.com">Enlace a Google</a>
+    </div>
+</body>
+</html>
