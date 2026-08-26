@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>css05FormsRWD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="paginaFormulario">
+        <header class="encabezado">Formulario</header>
+
+        <form class="formulario">
+        <div class="entradas">
+            <div class="entrada">
+                <label for="apellido">1 Apellido:</label>
+                <input type="text" id="apellido" name="apellido">
+            </div>
+
+            <div class="entrada">
+                <label for="nombres">2 Nombres:</label>
+                <input type="text" id="nombres" name="nombres">
+            </div>
+
+            <div class="entrada">
+                <label for="contrasenia">3 Contraseña:</label>
+                <input type="password" id="contrasenia" name="contrasenia">
+            </div>
+
+            <div class="entrada">
+                <label for="deshabilitado">4 Campo deshabilitado:</label>
+                <input type="text" id="deshabilitado" name="deshabilitado" value="valor deshabilitado" disabled>
+            </div>
+
+            <div class="entrada">
+                <label for="fecha">5 Fecha:</label>
+                <input type="date" id="fecha" name="fecha">
+            </div>
+
+            <div class="entrada">
+                <label for="dni">6 DNI:</label>
+                <input type="text" id="dni" name="dni">
+            </div>
+
+            <div class="entrada">
+                <span class="tituloEntrada">7 Actividades extracurriculares</span>
+                <label for="musica">Musica:</label>
+                <input type="checkbox" id="musica" name="musica">
+                <label for="pintura">Pintura artistica:</label>
+                <input type="checkbox" id="pintura" name="pintura">
+            </div>
+
+            <div class="entrada">
+                <span class="tituloEntrada">8 Sexo:</span>
+                <label for="masculino">Masculino:</label>
+                <input type="radio" id="masculino" name="sexo" checked>
+                <label for="femenino">Femenino:</label>
+                <input type="radio" id="femenino" name="sexo">
+            </div>
+
+            <div class="entrada">
+                <span class="tituloEntrada">9 Vacío</span>
+            </div>
+
+            <div class="entrada">
+                <label for="estudios">10 Estudios cursados:</label>
+                <select id="estudios" name="estudios">
+                    <option>Primarios</option>
+                    <option>Secundarios</option>
+                    <option>Terciarios</option>
+                    <option>Universitarios</option>
+                </select>
+            </div>
+
+            <div class="entrada">
+                <label for="area">11 Area de desempeño:</label>
+                <select id="area" name="area">
+                    <option>Administración</option>
+                    <option>Ventas</option>
+                    <option>Producción</option>
+                    <option>Sistemas</option>
+                </select>
+            </div>
+
+            <div class="entrada">
+                <label for="turno">12 Turno:</label>
+                <select id="turno" name="turno">
+                    <option>Mañana</option>
+                    <option>Tarde</option>
+                    <option>Noche</option>
+                </select>
+            </div>
+
+            <div class="entrada">
+                <span class="tituloEntrada">13 Conduce</span>
+                <label for="conduceSi">SI</label>
+                <input type="radio" id="conduceSi" name="conduce" checked>
+                <label for="conduceNo">No</label>
+                <input type="radio" id="conduceNo" name="conduce">
+            </div>
+        </div>
+
+            <div class="barraControl">
+                <button type="submit" class="boton">Enviar</button>
+                <button type="reset" class="boton">Reset</button>
+            </div>
+        </form>
+
+        <footer class="piePagina">Pie de formulario</footer>
+    </div>
+</body>
+</html>

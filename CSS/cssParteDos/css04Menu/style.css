@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #2e4a99;
+}
+
+#menu ul::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#menu ul li {
+    position: relative;
+    float: left;
+}
+
+#menu ul a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 15px 25px;
+    transition: background-color 0.2s ease;
+}
+
+#menu ul li > a:hover {
+    background-color: #4a6fc7;
+}
+
+/*La lista desplegable*/
+#menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 220px;
+    background-color: #1c3766;
+}
+
+/* items del menu desplegable */
+#menu ul ul li {
+    float: none;
+    width: 100%;
+}
+
+#menu ul ul a {
+    padding: 12px 20px;
+    font-weight: normal;
+}
+
+#menu ul ul li > a:hover {
+    background-color: #f39c12;
+    color: #1c3766;
+}
+
+/* items del menu desplegable al pasar el ratón */
+#menu ul li:hover ul {
+    display: block;
+}

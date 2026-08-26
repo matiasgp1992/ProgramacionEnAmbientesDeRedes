@@ -1,0 +1,36 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cajaFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 70%;
+    height: 250px;
+    background-color: #2c3e50;
+    border-radius: 10px;
+}
+
+.item {
+    width: 80px;
+    height: 80px;
+    background-color: #2980b9;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    border-radius: 8px;
+}

@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.paginaFormulario {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.encabezado, .piePagina {
+    flex: 0 0 auto;
+    background-color: #5b2c8d;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.formulario {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.entradas {
+    flex: 1 1 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 1fr;
+    min-height: 0;
+}
+
+.entrada {
+    border: 1px solid #b39ddb;
+    background-color: #ede7f6;
+    padding: 8px;
+    overflow: hidden;
+}
+
+.entrada label,
+.tituloEntrada {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: #4a148c;
+}
+
+.entrada input[type="text"],
+.entrada input[type="password"],
+.entrada input[type="date"] {
+    width: 90%;
+}
+
+.entrada select {
+    width: 90%;
+}
+
+.barraControl {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    background-color: #d1c4e9;
+}
+
+.boton {
+    width: 30%;
+    padding: 10px;
+    background-color: #7e57c2;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    font-size: 1em;
+    border-radius: 4px;
+}
+
+.boton:hover {
+    background-color: #5b2c8d;
+}
+
+@media (max-width: 1200px) {
+    .entradas {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .entradas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Debajo de 500px las 13 entradas se apilan una debajo de otra.
+   Ya no entran todas a la vez en el alto de la pantalla, así que
+   en este punto se habilita el scroll vertical de la página. */
+@media (max-width: 500px) {
+    html, body {
+        overflow: auto;
+    }
+
+    .paginaFormulario {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .entradas {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+    }
+
+    .entrada {
+        padding: 12px;
+    }
+
+    .barraControl {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

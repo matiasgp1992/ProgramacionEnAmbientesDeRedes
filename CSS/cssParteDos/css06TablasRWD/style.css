@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+.contenedorTabla {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.encabezado {
+    flex: 0 0 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1b3b6f;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.piePagina {
+    flex: 0 0 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1b3b6f;
+    color: #fff;
+}
+
+.tablaScroll {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    min-height: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px 12px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    background-color: #caa43e;
+    color: #1b3b6f;
+    z-index: 1;
+}
+
+tbody tr {
+    background-color: #2f6f6f;
+    color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #285f5f;
+}
+
+/*Selector por atributo*/
+[campo-dato='Id'] {
+    width: 5%;
+    text-align: center;
+}
+
+@media (max-width: 1000px) {
+    [campo-dato='Skype'] {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    [campo-dato='Twitter'] {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    [campo-dato='Web'] {
+        display: none;
+    }
+}
+
+@media (max-width: 450px) {
+    [campo-dato='Mail'] {
+        display: none;
+    }
+}
