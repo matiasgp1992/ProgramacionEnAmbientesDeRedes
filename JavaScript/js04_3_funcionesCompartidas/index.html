@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>js04_3_funcionesCompartidas</title>
+	<style>
+		.calculadora {
+			max-width: 400px;
+		}
+
+		#display {
+			width: 100%;
+			box-sizing: border-box;
+			text-align: right;
+			font-size: 1.2em;
+			padding: 8px;
+			margin-bottom: 10px;
+		}
+
+		.teclado {
+			background-color: #add8e6;
+			padding: 10px;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 8px;
+		}
+
+		.teclado button {
+			padding: 12px;
+		}
+
+		.controles {
+			background-color: #f0e68c;
+			padding: 10px;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 8px;
+			margin-top: 10px;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="calculadora">
+		<input type="text" id="display" readonly>
+
+		<div class="teclado">
+			<button class="digito" data-digito="1">1</button>
+			<button class="digito" data-digito="2">2</button>
+			<button class="digito" data-digito="3">3</button>
+			<button class="digito" data-digito="4">4</button>
+			<button class="digito" data-digito="5">5</button>
+			<button class="digito" data-digito="6">6</button>
+			<button class="digito" data-digito="7">7</button>
+			<button class="digito" data-digito="8">8</button>
+			<button class="digito" data-digito="9">9</button>
+			<button class="digito" data-digito="0">0</button>
+		</div>
+
+		<div class="controles">
+			<button id="btnSumarAcumulador">+Acumulador</button>
+			<button id="btnMostrarAcumulador">Muestra Acumulador</button>
+			<button id="btnBorrarAcumulador">Borra Acumulador</button>
+			<button id="btnBorrarDisplay">Borra display</button>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
