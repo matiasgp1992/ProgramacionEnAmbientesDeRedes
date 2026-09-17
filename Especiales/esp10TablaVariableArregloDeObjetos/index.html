@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>esp10TablaVariableArregloDeObjetos</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<header>
+		<h1>Contratos de Crédito</h1>
+		<div class="botones">
+			<button id="btCargarDatos">Cargar datos</button>
+			<button id="btVaciarDatos">Vaciar datos</button>
+		</div>
+	</header>
+
+	<div class="contenedorTabla">
+		<table id="tablaContratos">
+			<thead>
+				<tr>
+					<th>Id_Contrato</th>
+					<th>DNI_Deudor</th>
+					<th>Apellido_Nombres</th>
+					<th>Monto_total_financiado</th>
+					<th>FechaContrato</th>
+					<th>PlanDePago</th>
+					<th>QR</th>
+				</tr>
+			</thead>
+			<tbody id="tbDatos">
+			</tbody>
+		</table>
+	</div>
+
+	<div class="barraTotales">
+		<span>Totales:</span>
+		<span id="totalContratos">0 contratos</span>
+		<span id="totalFinanciado">$ 0</span>
+	</div>
+
+	<footer>
+		<p>Matias Gomez Paratcha</p>
+	</footer>
+
+	<script src="../jquery.js"></script>
+	<script src="contratos.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>

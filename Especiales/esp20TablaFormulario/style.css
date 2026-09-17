@@ -1,0 +1,261 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #eef2f5;
+}
+
+header {
+	background-color: #ffffff;
+	border-bottom: 1px solid #d0d0d0;
+	padding: 15px 25px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 15px;
+}
+
+header h1 {
+	font-size: 1.2em;
+	margin: 0;
+	color: #1f2d3d;
+}
+
+.botones button {
+	padding: 10px 20px;
+	margin-left: 10px;
+	border: none;
+	border-radius: 4px;
+	font-weight: bold;
+	cursor: pointer;
+	color: #fff;
+}
+
+#btCargarDatos {
+	background-color: #2e7d32;
+}
+
+#btCargarDatos:hover {
+	background-color: #256428;
+}
+
+#btVaciarDatos {
+	background-color: #c62828;
+}
+
+#btVaciarDatos:hover {
+	background-color: #a02121;
+}
+
+#btCargarForm {
+	background-color: #1565c0;
+}
+
+#btCargarForm:hover {
+	background-color: #104d92;
+}
+
+.contenedorTabla {
+	flex: 1;
+	overflow-x: auto;
+	padding: 20px;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	background-color: #fff;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+thead th {
+	background-color: #1f2d3d;
+	color: #fff;
+	text-align: left;
+	padding: 12px 10px;
+	position: sticky;
+	top: 0;
+}
+
+tbody td {
+	padding: 10px;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+tbody tr:nth-child(even) {
+	background-color: #f7f9fb;
+}
+
+tbody tr:hover {
+	background-color: #e3edf7;
+}
+
+tbody tr.filaNueva {
+	background-color: #e5f5e0;
+}
+
+.barraTotales {
+	background-color: #1f2d3d;
+	color: #fff;
+	font-weight: bold;
+	padding: 12px 25px;
+	display: flex;
+	gap: 30px;
+	flex-wrap: wrap;
+	border-top: 1px solid #33465c;
+}
+
+footer {
+	background-color: #37474f;
+	color: #fff;
+	text-align: center;
+	padding: 12px 0;
+}
+
+/* Modal con el formulario de alta */
+
+#ventanaModal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.55);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	transition: opacity 0.2s ease-in-out;
+}
+
+.ventanaModalApagado {
+	visibility: hidden;
+	opacity: 0;
+}
+
+.ventanaModalPrendido {
+	visibility: visible;
+	opacity: 1;
+}
+
+#cajaModal {
+	background-color: #fff;
+	border-radius: 6px;
+	max-width: 640px;
+	width: 100%;
+	max-height: 90vh;
+	overflow-y: auto;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+#cajaModal header {
+	text-align: center;
+	border-radius: 6px 6px 0 0;
+}
+
+#cajaModal header h1 {
+	margin: 0;
+	font-size: 1.2em;
+	color: #1f2d3d;
+}
+
+#cajaModal header h2 {
+	margin: 5px 0 0 0;
+	font-size: 1em;
+	color: #1f2d3d;
+	font-weight: normal;
+}
+
+#cajaModal form {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 20px 40px;
+	padding: 30px 35px;
+}
+
+.campo {
+	display: flex;
+	flex-direction: column;
+}
+
+.campo label {
+	font-weight: bold;
+	margin-bottom: 8px;
+	color: #1f2d3d;
+}
+
+.campo input,
+.campo select {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-family: inherit;
+	font-size: 1em;
+	background-color: #fff;
+}
+
+.botonesModal {
+	flex-direction: row;
+	gap: 15px;
+}
+
+.botonesModal button {
+	flex: 1;
+	padding: 12px;
+	border: none;
+	border-radius: 4px;
+	font-weight: bold;
+	font-size: 1em;
+	cursor: pointer;
+	color: #fff;
+}
+
+#formContrato button[type="submit"] {
+	background-color: #2e7d32;
+}
+
+#formContrato button[type="submit"]:hover {
+	background-color: #256428;
+}
+
+#btCerrarModal {
+	background-color: #c62828;
+}
+
+#btCerrarModal:hover {
+	background-color: #a02121;
+}
+
+@media (max-width: 700px) {
+	header {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.botones {
+		display: flex;
+	}
+
+	.botones button {
+		flex: 1;
+		margin: 0 5px;
+	}
+}
+
+@media (max-width: 600px) {
+	#cajaModal form {
+		padding: 20px;
+	}
+}
