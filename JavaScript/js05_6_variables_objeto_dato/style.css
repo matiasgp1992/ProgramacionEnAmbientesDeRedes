@@ -1,0 +1,144 @@
+body {
+	font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 20px;
+	background-color: #f2f4f8;
+	color: #2b2d42;
+}
+
+/* Consignas en una tarjeta con borde lateral */
+#consignas {
+	background-color: white;
+	border-left: 5px solid #5c6bc0;
+	border-radius: 6px;
+	padding: 12px 18px;
+	margin-bottom: 18px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+#consignas h2 {
+	margin: 0 0 8px;
+	font-size: 1.15em;
+	color: #3949ab;
+}
+
+#consignas p {
+	margin: 3px 0;
+	font-size: 0.85em;
+	line-height: 1.4;
+}
+
+/* Ingreso de datos y control lado a lado */
+#contenedorSuperior {
+	display: flex;
+	gap: 18px;
+	align-items: flex-start;
+	margin-bottom: 18px;
+}
+
+#contenedorIngreso,
+#contenedorControl {
+	background-color: white;
+	border-radius: 6px;
+	padding: 14px 18px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+#contenedorIngreso {
+	flex: 2;
+}
+
+#contenedorControl {
+	flex: 1;
+}
+
+h3 {
+	margin: 0 0 10px;
+	font-size: 1em;
+	color: #3949ab;
+	border-bottom: 1px solid #e0e3eb;
+	padding-bottom: 6px;
+}
+
+#contenedorIngreso label {
+	display: block;
+	font-size: 0.8em;
+	font-weight: 600;
+	margin-bottom: 3px;
+}
+
+#contenedorIngreso input {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 6px 8px;
+	margin-bottom: 12px;
+	border: 1px solid #c5cad6;
+	border-radius: 4px;
+	font-size: 0.9em;
+}
+
+#contenedorIngreso input:focus {
+	outline: none;
+	border-color: #5c6bc0;
+}
+
+/* Botones de control apilados */
+#contenedorControl button {
+	display: block;
+	width: 100%;
+	padding: 8px;
+	margin-bottom: 8px;
+	border: none;
+	border-radius: 4px;
+	background-color: #5c6bc0;
+	color: white;
+	font-size: 0.9em;
+	cursor: pointer;
+}
+
+#contenedorControl button:hover {
+	background-color: #3949ab;
+}
+
+#contenedorControl button:disabled {
+	background-color: #b0b5c9;
+	cursor: not-allowed;
+}
+
+/* Presentación de la tabla */
+#presentacion {
+	display: none;
+	background-color: white;
+	border-radius: 6px;
+	padding: 14px 18px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+#presentacion h2 {
+	margin: 0 0 10px;
+	font-size: 1.1em;
+	color: #3949ab;
+}
+
+#presentacion table {
+	border-collapse: collapse;
+	border: none !important;
+	font-size: 0.9em;
+}
+
+#presentacion td {
+	padding: 6px 14px;
+	border-bottom: 1px solid #e0e3eb;
+}
+
+#presentacion tr:nth-child(even) {
+	background-color: #f5f6fb;
+}
+
+#presentacion h4 {
+	margin: 10px 0 0;
+	font-size: 0.85em;
+	font-weight: normal;
+	color: #5a5f73;
+}

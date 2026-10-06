@@ -4,17 +4,49 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>js05_6_variables_objeto_dato</title>
+	<link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 
-	<header>
-		<h1>js05_6_variables_objeto_dato</h1>
+	<header id="consignas">
+		<h2>Consignas del ejercicio</h2>
+		<p>No usar jquery por ahora</p>
+		<p>Armar 3 contenedores: (1)Ingreso de datos, (2) Control y (3)Presentación de tabla que aparece y desaparece con botones en el control</p>
+		<p>Declarar y hacer uso de Objetos de dato (datos de tipo objeto)</p>
+		<p>Cargar 2 personas en un array por programa</p>
+		<p>Dejar de usar la función prompt() para el ingreso de datos. Armar un contenedor para el ingreso de datos desde consola (solo inputs sin formulario)</p>
+		<p>Dejar de usar document.write() y escribir contenido dentro de un elemento html (puede ser un div de presentación)</p>
+		<p>Tres botones para llamar a tres funciones. Una para cargar un nuevo objeto de dato PREVIA VALIDACION!,<br>
+		otra para mostrar en formato de tabla el array completo de elementos con su longitud,<br>
+		y la tercera para ocultar la presentacion.</p>
+		<p>El procedimiento para ocultar el elemento de presentación cambiara el estilo display:none del contenedor de presentacion.</p>
 	</header>
 
 	<main>
+		<div id="contenedorSuperior">
+			<div id="contenedorIngreso">
+				<h3>Ingreso de datos de persona:</h3>
+				<label for="nombre">Nombre:</label>
+				<input type="text" id="nombre" required>
 
+				<label for="apellido">Apellido:</label>
+				<input type="text" id="apellido" required>
+
+				<label for="fechaNac">Fecha de Nacimiento:</label>
+				<input type="date" id="fechaNac" required>
+			</div>
+
+			<div id="contenedorControl">
+				<h3>Control</h3>
+				<button id="btnCrear" disabled>Crea persona</button>
+				<button id="btnListar">Lista personas</button>
+				<button id="btnOcultar">Oculta presentación</button>
+			</div>
+		</div>
+
+		<div id="presentacion"></div>
 	</main>
 
-	<script src="script.js"></script>
+	<script src="script.js?v=3"></script>
 </body>
 </html>

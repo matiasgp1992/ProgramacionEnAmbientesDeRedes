@@ -1,0 +1,85 @@
+body {
+	font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 30px 20px;
+	background-color: #f2f4f8;
+	color: #2b2d42;
+}
+
+header h1 {
+	margin: 0 0 20px;
+	font-size: 1.3em;
+	text-align: center;
+	color: #3949ab;
+}
+
+/* Botones de control en la esquina superior izquierda */
+#botonera {
+	position: fixed;
+	top: 30px;
+	left: 20px;
+	padding: 12px;
+	background-color: white;
+	border-radius: 8px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#botonera button {
+	display: block;
+	width: 100px;
+	padding: 8px 0;
+	margin-bottom: 8px;
+	border: none;
+	border-radius: 4px;
+	font-size: 0.9em;
+	color: white;
+	cursor: pointer;
+}
+
+#botonera button:last-child {
+	margin-bottom: 0;
+}
+
+#btnCrear {
+	background-color: #43a047;
+}
+
+#btnLimpiar {
+	background-color: #e53935;
+}
+
+#btnInfo {
+	background-color: #3949ab;
+}
+
+#botonera button:hover {
+	filter: brightness(0.9);
+}
+
+/* Contenedor centrado que recibe los objetos creados; scrollea cuando se llena */
+#contenedor {
+	width: 420px;
+	height: 380px;
+	margin: 0 auto;
+	padding: 14px;
+	background-color: white;
+	border: 2px dashed #b0b5c9;
+	border-radius: 8px;
+	overflow-y: auto;
+}
+
+/* Estilo de cada elemento creado dinámicamente */
+.claseObjetoDinamico {
+	padding: 10px 14px;
+	margin-bottom: 10px;
+	background-color: #e8eaf6;
+	border-left: 5px solid #3949ab;
+	border-radius: 4px;
+}
+
+.claseObjetoDinamico h1 {
+	margin: 0;
+	font-size: 1em;
+	font-weight: 600;
+	color: #2b2d42;
+}

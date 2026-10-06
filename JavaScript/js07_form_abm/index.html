@@ -4,17 +4,39 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>js07_form_abm</title>
+	<link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
 
-	<header>
-		<h1>js07_form_abm</h1>
-	</header>
-
 	<main>
-
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat. Cras mollis scelerisque nunc. Nullam arcu. Aliquam consequat. Curabitur augue lorem, dapibus quis, laoreet et, pretium ac, nisi. Aenean magna nisl, mollis quis, molestie eu, feugiat in, orci. In hac habitasse platea dictumst.</p>
+		<p>Fusce convallis, mauris imperdiet gravida bibendum, nisl turpis suscipit mauris, sed placerat ipsum urna sed risus. In convallis tellus a mauris. Curabitur non elit ut libero tristique sodales. Mauris a lacus. Donec mattis semper leo. In hac habitasse platea dictumst. Vivamus facilisis diam at odio. Mauris dictum, nisi eget consequat elementum, lacus ligula molestie metus, non feugiat orci magna ac sem. Donec turpis. Donec vitae metus. Morbi tristique neque eu mauris. Quisque gravida ipsum non sapien. Proin turpis lacus, scelerisque vitae, elementum at, lobortis ac, quam. Aliquam dictum eleifend risus. In hac habitasse platea dictumst. Etiam sit amet diam. Suspendisse odio. Suspendisse nunc. In semper bibendum libero. Proin nonummy, lacus eget pulvinar lacinia, pede felis dignissim leo, at vehicula lacus nibh eget felis. Nullam ut sem. Nam sagittis, neque vel pellentesque sagittis, mauris sem vehicula dui, sit amet fermentum tortor est vel ligula.</p>
+		<p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus. Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi. Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc. Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper magna. Ut aliquam sollicitudin leo. Cras iaculis ultricies nulla. Donec quis dui at dolor tempor interdum.</p>
 	</main>
 
-	<script src="script.js"></script>
+	<div id="fondoModal">
+		<div id="ventanaModal">
+			<h1>FORMULARIO ABM</h1>
+			<form id="formAbm">
+				<label for="apellido">Apellido:</label>
+				<input type="text" id="apellido" name="apellido" required>
+
+				<label for="nombres">Nombres:</label>
+				<input type="text" id="nombres" name="nombres" required>
+
+				<label for="saldo">Saldo (150 a 1000):</label>
+				<input type="number" id="saldo" name="saldo" min="150" max="1000" step="0.01" required>
+
+				<div id="botonera">
+					<button type="button" id="btnBlanquear" disabled>Blanquear</button>
+					<button type="button" id="btnAlta" disabled>Alta</button>
+					<button type="button" id="btnModi" disabled>Modi</button>
+					<button type="button" id="btnBaja" disabled>Baja</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<script src="script.js?v=2"></script>
 </body>
 </html>
