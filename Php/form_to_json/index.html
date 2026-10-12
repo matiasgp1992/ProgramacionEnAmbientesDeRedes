@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Form to JSON con API fetch</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js" defer></script>
+</head>
+<body>
+
+	<header>
+		<h1>Form to JSON con API fetch</h1>
+	</header>
+
+	<main>
+
+		<p class="nota">El servidor lee los datos del formulario con $_POST, arma un objeto PHP  y lo devuelve en formato JSON con json_encode(). Comparar el envio tradicional (reemplaza el documento) con el disparo AJAX (la pagina se mantiene).</p>
+
+		<form id="formulario" method="post" action="./respuesta.php">
+			<label>Codigo de usuario: <input type="number" name="codUsuario" value="1234" required></label>
+			<label>Apellido: <input type="text" name="apellido" value="Perez" required></label>
+			<label>Nombre: <input type="text" name="nombre" value="Juan" required></label>
+			<button type="submit">Enviar el formulario de forma tradicional</button>
+		</form>
+
+		<button id="disparo" title="Esperar 3 segundos de retardo para la respuesta">Disparar requerimiento asincronico AJAX</button>
+		<span id="espera" class="nota"></span>
+
+	</main>
+
+	<footer>
+		<a href="../">Volver al indice</a>
+	</footer>
+
+</body>
+</html>

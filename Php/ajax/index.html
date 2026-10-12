@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ajax con API fetch</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js" defer></script>
+</head>
+<body>
+
+	<header>
+		<h1>Ajax con API fetch</h1>
+	</header>
+
+	<main>
+
+		<p class="nota">La clave se envia al servidor con un requerimiento HTTP asincronico. El PHP demora 3 segundos en responder para poder ver el tiempo entre el disparo y la llegada de la respuesta, sin recargar la pagina.</p>
+
+		<div class="tablero">
+
+			<div class="panel entrada">
+				<h2>Dato a encriptar</h2>
+				<label for="clave">Clave:</label>
+				<input type="text" id="clave" placeholder="Ingresar la clave">
+			</div>
+
+			<button id="disparo" class="disparo" title="Disparar requerimiento asincronico AJAX">&#10140;</button>
+
+			<div class="panel">
+				<h2>Estado del requerimiento</h2>
+				<div id="estado" class="estado">Sin disparar</div>
+			</div>
+
+		</div>
+
+		<div class="panel">
+			<h2>Resultado</h2>
+			<div id="resultado" class="resultado"></div>
+		</div>
+
+	</main>
+
+	<footer>
+		<a href="../">Volver al indice</a>
+	</footer>
+
+</body>
+</html>
