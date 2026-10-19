@@ -1,0 +1,5 @@
+# Credenciales de base de datos
+datosConexion.php
+
+# Logs de errores generados por PHP
+errores.log

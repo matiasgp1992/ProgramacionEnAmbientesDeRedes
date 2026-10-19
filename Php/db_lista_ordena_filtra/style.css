@@ -1,0 +1,202 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #eef2f5;
+}
+
+header {
+	background-color: #ffffff;
+	border-bottom: 1px solid #d0d0d0;
+	padding: 15px 25px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 15px;
+}
+
+header h1 {
+	font-size: 1.2em;
+	margin: 0;
+	color: #1f2d3d;
+}
+
+.campoOrden {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.campoOrden label {
+	font-weight: bold;
+	color: #1f2d3d;
+}
+
+#orden {
+	padding: 8px 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background-color: #f4f6f8;
+	font-family: inherit;
+	font-size: 0.95em;
+	width: 190px;
+}
+
+.botones button {
+	padding: 10px 20px;
+	margin-left: 10px;
+	border: none;
+	border-radius: 4px;
+	font-weight: bold;
+	cursor: pointer;
+	color: #fff;
+}
+
+#btCargarDatos {
+	background-color: #2e7d32;
+}
+
+#btCargarDatos:hover {
+	background-color: #256428;
+}
+
+#btVaciarDatos {
+	background-color: #c62828;
+}
+
+#btVaciarDatos:hover {
+	background-color: #a02121;
+}
+
+/* Solo el area de datos es scrolleable */
+.contenedorTabla {
+	flex: 1;
+	min-height: 0;
+	overflow: auto;
+	margin: 20px;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	background-color: #fff;
+}
+
+thead {
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}
+
+thead th {
+	background-color: #1f2d3d;
+	color: #fff;
+	text-align: left;
+	padding: 12px 10px;
+	white-space: nowrap;
+}
+
+thead tr:first-child th[id] {
+	cursor: pointer;
+}
+
+thead tr:first-child th[id]:hover {
+	background-color: #2c3e53;
+	text-decoration: underline;
+}
+
+.filaFiltros th {
+	background-color: #33465c;
+	padding: 6px 10px;
+}
+
+.filaFiltros input,
+.filaFiltros select {
+	width: 100%;
+	min-width: 90px;
+	padding: 6px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	font-family: inherit;
+	font-size: 0.9em;
+	background-color: #fff;
+}
+
+tbody td {
+	padding: 10px;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+tbody tr:nth-child(even) {
+	background-color: #f7f9fb;
+}
+
+tbody tr:hover {
+	background-color: #e3edf7;
+}
+
+tbody tr.filaMensaje td {
+	text-align: center;
+	font-style: italic;
+	color: #555;
+	padding: 30px 10px;
+}
+
+tfoot {
+	position: sticky;
+	bottom: 0;
+}
+
+tfoot td {
+	background-color: #1f2d3d;
+	color: #fff;
+	font-weight: bold;
+	padding: 12px 10px;
+}
+
+footer {
+	background-color: #37474f;
+	color: #fff;
+	text-align: center;
+	padding: 12px 0;
+}
+
+footer p {
+	margin: 0;
+}
+
+@media (max-width: 700px) {
+	header {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.campoOrden {
+		justify-content: center;
+	}
+
+	.botones {
+		display: flex;
+	}
+
+	.botones button {
+		flex: 1;
+		margin: 0 5px;
+	}
+
+	.contenedorTabla {
+		margin: 10px;
+	}
+}

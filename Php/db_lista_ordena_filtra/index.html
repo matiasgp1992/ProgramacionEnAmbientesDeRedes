@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DB Lista Ordena Filtra</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<header>
+		<h1>Contratos de Crédito</h1>
+		<div class="campoOrden">
+			<label for="orden">Orden:</label>
+			<input type="text" id="orden" name="orden" value="idContrato" readonly>
+		</div>
+		<div class="botones">
+			<button id="btCargarDatos">Cargar datos</button>
+			<button id="btVaciarDatos">Vaciar datos</button>
+		</div>
+	</header>
+
+	<div class="contenedorTabla">
+		<table id="tablaContratos">
+			<thead>
+				<tr>
+					<th id="th_contratos_idContrato">Id_Contrato</th>
+					<th id="th_contratos_dniDeudor">DNI_Deudor</th>
+					<th id="th_contratos_apellidoNombres">Apellido_Nombres</th>
+					<th id="th_contratos_montoTotalFinanciado">Monto_total_financiado</th>
+					<th id="th_contratos_fechaContrato">FechaContrato</th>
+					<th id="th_contratos_codPlan">PlanDePago</th>
+					<th>QR</th>
+				</tr>
+				<tr class="filaFiltros">
+					<th><input type="text" id="f_contratos_idContrato" placeholder="Filtro"></th>
+					<th><input type="text" id="f_contratos_dniDeudor" placeholder="Filtro"></th>
+					<th><input type="text" id="f_contratos_apellidoNombres" placeholder="Filtro"></th>
+					<th></th>
+					<th><input type="text" id="f_contratos_fechaContrato" placeholder="aaaa-mm-dd"></th>
+					<th><select id="f_contratos_codPlan"></select></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody id="tbDatos">
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="3">Total de registros: <span id="totalContratos">0</span></td>
+					<td colspan="4">Total financiado: <span id="totalFinanciado">$ 0</span></td>
+				</tr>
+			</tfoot>
+		</table>
+	</div>
+
+	<footer>
+		<p>Tabla: Contratos de Crédito — Matias Gomez Paratcha</p>
+	</footer>
+
+	<script src="script.js"></script>
+</body>
+</html>
